@@ -18,3 +18,29 @@ AI Model: Google Gemini API
 Frontend: Streamlit
 Voice: gTTS for Text-to-Speech
 Other Tools: Requests, Uvicorn, Web Search APIs
+
+Requirements
+See the requirements.txt file and run:
+pip install -r requirements.txt
+
+Project Workflow
+Upload PDF
+→ Save & decode PDF → Convert PDF pages into images.
+
+Text Extraction
+→ Apply Tesseract OCR to extract text.
+
+Chunking & Embedding
+→ Split text into chunks → Create embeddings → Store in ChromaDB.
+
+Query Processing
+→ User asks question → Retrieve top chunks using semantic search.
+
+Answer Generation
+→ Generate response using Google Gemini API.
+
+Fallback (Optional)
+→ If PDF answer not found → Search the web → Regenerate answer.
+
+Voice Output
+→ Convert response to speech (MP3) using gTTS → Stream audio in UI.
