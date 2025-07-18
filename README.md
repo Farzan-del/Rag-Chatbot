@@ -44,3 +44,36 @@ Fallback (Optional)
 
 Voice Output
 → Convert response to speech (MP3) using gTTS → Stream audio in UI.
+
+to run the code you must make the following folder struture
+RAG_Project/
+│
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+│
+├── App/                         # Core backend logic
+│   ├── api_main.py              # FastAPI main backend entry point
+│   ├── pdf2img.py               # Convert PDF to images using PyMuPDF
+│   ├── ocr_tesseract.py         # Perform OCR on images using Tesseract
+│   ├── base64_utils.py          # Encode/decode PDFs as Base64
+│   ├── chunker.py               # Chunk extracted text
+│   ├── embed_store.py           # Generate embeddings & store in ChromaDB
+│   ├── retriever.py             # Retrieve top-k chunks for query
+│   ├── llm_generator.py         # Generate answers using Google Gemini API
+│   ├── web_search.py            # Web search fallback
+│   ├── text_to_speech.py        # Convert text answer to MP3
+│
+├── streamlit_app/               # Frontend
+│   ├── app.py                   # Streamlit app for UI
+│
+├── Data/                        # Data storage folder
+│   ├── Input_pdf_folder/        # Uploaded PDFs
+│   ├── Extracted_texts/         # Extracted text files
+│   ├── Chunks/                  # Chunked text files
+│   ├── Images/                  # Converted PDF pages as images
+│   ├── Audio/                   # Generated speech MP3 files
+│
+├── vector_db/                   # Vector Database for RAG
+│   ├── chroma_db/               # ChromaDB storage for embeddings
+│
+└── .venv/                       # Virtual environment (optional)
