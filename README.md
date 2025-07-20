@@ -1,3 +1,9 @@
+to run the code you must make the following folder struture for which you need to download this file first.
+
+
+
+RAG_Project/ │ ├── requirements.txt # Python dependencies ├── README.md # Project documentation │ ├── App/ # Core backend logic │ ├── api_main.py # FastAPI main backend entry point │ ├── pdf2img.py # Convert PDF to images using PyMuPDF │ ├── ocr_tesseract.py # Perform OCR on images using Tesseract │ ├── base64_utils.py # Encode/decode PDFs as Base64 │ ├── chunker.py # Chunk extracted text │ ├── embed_store.py # Generate embeddings & store in ChromaDB │ ├── retriever.py # Retrieve top-k chunks for query │ ├── llm_generator.py # Generate answers using Google Gemini API │ ├── web_search.py # Web search fallback │ ├── text_to_speech.py # Convert text answer to MP3 │ ├── streamlit_app/ # Frontend │ ├── app.py # Streamlit app for UI │ ├── Data/ # Data storage folder │ ├── Input_pdf_folder/ # Uploaded PDFs │ ├── Extracted_texts/ # Extracted text files │ ├── Chunks/ # Chunked text files │ ├── Images/ # Converted PDF pages as images │ ├── Audio/ # Generated speech MP3 files │ ├── vector_db/ # Vector Database for RAG │ ├── chroma_db/ # ChromaDB storage for embeddings │ └── .venv/ # Virtual environment (optional)
+
 📚 RAG-Powered Chatbot with Voice
 This project is an AI-powered Retrieval-Augmented Generation (RAG) chatbot that enables users to upload PDFs, extract text, and query the content intelligently. It leverages OCR for scanned PDFs, vector embeddings for document search, and an advanced LLM (Google Gemini) for generating precise, context-aware answers. If the relevant answer is not found in the uploaded document, the system optionally performs a web search to enrich responses, ensuring maximum accuracy.
 
