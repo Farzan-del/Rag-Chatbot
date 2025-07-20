@@ -1,4 +1,4 @@
-to run the code you must make the following folder struture for which you need to download this file first.
+to run the code you must make the following folder struture for which you need to copy raw file and paste in notepad first. It will make you clear with the folder structure. Make folder structure like that and download all the libraries from requirements.txt file and then run this project.
 
 
 
