@@ -45,8 +45,8 @@ import requests
 import os
 
 # Google API Key and Search Engine ID (configure in environment or hardcode for now)
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyDNVc7NvUcz39LhvDIK6S85WfcjMBMLfH8")
-SEARCH_ENGINE_ID = os.getenv("SEARCH_ENGINE_ID", "21d752bd27d534721")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "Add_your_api_key_here")
+SEARCH_ENGINE_ID = os.getenv("SEARCH_ENGINE_ID", "Your_search_engine_id_here")
 
 def get_web_search_results(query: str, num_results: int = 5) -> list:
     """
